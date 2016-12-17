@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -111,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void keep(View view) {
         if (!mediaPlayer.isPlaying()) {
-            mediaPlayer.start();
+//            mediaPlayer.start();
         }
     }
 
@@ -121,8 +122,13 @@ public class MainActivity extends AppCompatActivity {
      */
     public void stop(View view) {
         mediaPlayer.stop();
+        Log.e("TAG", "stop: ");
         imageView.setVisibility(View.VISIBLE);
         surfaceView.setVisibility(View.INVISIBLE);
         mediaPlayer.reset();
+    }
+
+    public void m() {
+        
     }
 }
